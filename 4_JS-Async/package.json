@@ -1,0 +1,14 @@
+{
+  "name": "4_js-async",
+  "version": "1.0.0",
+  "description": "Segunda descripción.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Ejecutando main.js\" && node main.js",
+    "apunte": "echo \"Ejecutando apunte.js\" && node apunte.js"
+  },
+  "keywords": [],
+  "author": "Gerardo",
+  "license": "ISC"
+}
