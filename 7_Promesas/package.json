@@ -1,0 +1,19 @@
+{
+  "name": "7_promesas",
+  "version": "1.0.0",
+  "description": "Promesas y request",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [
+    "npm",
+    "request"
+  ],
+  "author": "Gera Medina",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
