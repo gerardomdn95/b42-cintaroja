@@ -34,5 +34,16 @@ getAsteroids('2020', '06', '24')
   .catch((err) => console.log(err));
 
   // [
-  // '4545645: nombre false'
+  // 4534354: {
+  // name: "Lgdx"
+  // dangerous: true
+  // }
+    // 4534354: {
+  // name: "Lgdx"
+  // dangerous: true
+  // }
+    // 4534354: {
+  // name: "Lgdx"
+  // dangerous: true
+  // }
   // ]
