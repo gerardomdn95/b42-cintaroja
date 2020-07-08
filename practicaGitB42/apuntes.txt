@@ -1,0 +1,19 @@
+git init -> Inicializamos repositorio
+
+git clone (url) -> Clonar repositorio existente
+
+git status -> Nos muestra un desglose los archivos agregados y modificados
+
+git add (nombre archivo) -> Agregamos archivos al staging area
+
+git commit -m “Comentario” -> Agregamos comentario sobre el cambio hecho
+
+git push -> Enviamos cambios a repositorio remoto
+
+git checkout -b (nombre) -> Salimos de la rama actual creando una nueva
+
+git checkout (nombre) -> Salimos de la rama actual a una existente
+
+git merge (rama) -> Unimos cambios de una rama
+
+git pull -> Obtenemos cambios más recientes de la rama
