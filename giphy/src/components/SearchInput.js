@@ -1,10 +1,11 @@
 import React from 'react';
 
 const SearchInput = (props) => {
+  const { getGifs } = props;
 
   const handleChange = (e) => {
     console.log(e.target.value);
-    props.getGifs(e.target.value);
+    getGifs(e.target.value);
   }
 
   return (

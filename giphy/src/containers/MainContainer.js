@@ -11,17 +11,18 @@ const MainContainer = () => {
   const [loading, setLoading] = useState(false);
 
   const getGifs = (query) => {
+    query = query === undefined ? 'demo' : query;
     setLoading(true);
-    const URI = `https://api.giphy.com/v1/gifs/search?api_key=AwF7TLgmC9XUe03VlTUMbaHUOgCS1S0u&q=${query}&limit=5`
+    const URI = `https://api.giphy.com/v1/gifs/search?api_key=AwF7TLgmC9XUe03VlTUMbaHUOgCS1S0u&q=${query}&limit=5`;
     axios.get(URI)
       .then((res) => {
         setGifs(res.data.data);
         setLoading(false);
       })
-      .catch(((error) => {
+      .catch((error) => {
         alert(error);
         setLoading(false);
-      }))
+      })
   }
 
   // Componente ha iniciado
@@ -36,9 +37,11 @@ const MainContainer = () => {
       <div className="container">
         <SearchInput getGifs={getGifs} />
         {loading
-          ? (<div className="spinner-border text-primary" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>)
+          ? (
+            <div className="spinner-border text-primary" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
+          )
           : null}
         {gifs.map((gif) => (
           <GifCard
@@ -53,5 +56,7 @@ const MainContainer = () => {
     </div>
   )
 }
+
+// [{}, {}, {}, {}, {}]
 
 export default MainContainer;
