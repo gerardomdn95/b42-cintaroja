@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
 import Task from '../components/Task';
 import axios from 'axios';
 import { TaskClass } from '../utils/TaskClass';
@@ -34,7 +33,6 @@ const MainContainer = () => {
 
   return (
     <React.Fragment>
-      <Navbar />
       <main className="background">
         <div className="container pt-4">
           {tasks
