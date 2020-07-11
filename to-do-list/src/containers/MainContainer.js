@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Task from '../components/Task';
 import axios from 'axios';
+import { TaskClass } from '../utils/TaskClass';
 import './mainContainer.css';
 
 const MainContainer = () => {
@@ -20,8 +21,11 @@ const MainContainer = () => {
       .catch((error) => alert(error))
   }
 
-  const completeTask = () => {
-
+  const completeTask = (category, title, done, id) => {
+    const currentTask = new TaskClass(category, title, done, id);
+    axios.patch(URL, currentTask)
+      .then(() => getTasks())
+      .catch((error) => alert(error))
   }
 
   useEffect(() => {
@@ -42,6 +46,7 @@ const MainContainer = () => {
                 done={tasks[id].done}
                 category={tasks[id].category}
                 deleteTask={deleteTask}
+                completeTask={completeTask}
               />)
             : <h1 className="text-white text-center">
                 Completaste todas tus tareas 👌

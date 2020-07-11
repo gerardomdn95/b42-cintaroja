@@ -8,7 +8,7 @@ class TaskClass {
   }
 }
 
-const ejemplo = new TaskClass('Hogar', 'Tarea', true, 'bdhjsjed3a');
-console.log(ejemplo);
+// const ejemplo = new TaskClass('Hogar', 'Tarea', true, 'bdhjsjed3a');
+// console.log(ejemplo);
 
 module.exports = { TaskClass };
