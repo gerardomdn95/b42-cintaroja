@@ -6,7 +6,7 @@ import './mainContainer.css';
 
 const MainContainer = () => {
   const [tasks, setTasks] = useState(null);
-  const URL = 'https://to-do-devf-8485d.firebaseio.com/task.json';
+  const URL = 'https://AQUIVAELTUYO.firebaseio.com/task.json';
 
   const getTasks = () => {
     axios.get(URL)
@@ -15,7 +15,7 @@ const MainContainer = () => {
   }
 
   const deleteTask = (id) => {
-    axios.delete(`https://to-do-devf-8485d.firebaseio.com/task/${id}.json`)
+    axios.delete(`https://AQUIVAELTUYO.firebaseio.com/task/${id}.json`)
       .then(() => getTasks())
       .catch((error) => alert(error))
   }
